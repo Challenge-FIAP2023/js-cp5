@@ -1,9 +1,9 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { } from 'react';
+import ReactDOM from 'react-dom/client'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-
-
-import App from './App.jsx'
+import App from './App.jsx';
+import Error from './routes/Error.jsx';
 import Home from './routes/Home.jsx';
 import Login from './routes/Login.jsx';
 import Produtos from './routes/Produtos.jsx';
@@ -16,31 +16,28 @@ import EditarPedido from './routes/EditarPedido.jsx';
 import ExcluirProduto from './routes/ExcluirProduto.jsx';
 import ExcluirPedido from './routes/ExcluirPedido.jsx';
 
+
+const router = createBrowserRouter ([
+  {
+    path: '/', element: <App/>,
+    errorElement: <Error />,
+
+    children: [
+      {path:'/', element:<Home />},
+      {path:'/login', element:<Login />},
+      {path:'/produtos', element:<Produtos />},
+      {path:'/pedido', element:<Pedido />},
+      {path:'/sobre', element:<Sobre />},
+      {path:'/cadastrar/produto', element:<InserirProduto />},
+      {path:'/cadastrar/pedido', element:<InserirPedido />},
+      {path:'/editar/produtos/:id', element:<EditarProduto />},
+      {path:'/editar/pedido/:id', element:<EditarPedido />},
+      {path:'/excluir/produtos/id:', element:<ExcluirProduto />},
+      {path:'/excluir/pedido/:id', element:<ExcluirPedido />},
+    ]
+  }
+])
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <RouterProvider router={router} />
 )
-
-function Main() {
-  return (
-      <div>
-        <Router>
-          <Route exact path="/" component={Home} />
-          <Route path="/login" component={Login} />
-          <Route path="/produtos" component={Produtos} />
-          <Route path="/pedido" component={Pedido} />
-          <Route path="/sobre" component={Sobre} />
-          <Route path="/inserir-produto" component={InserirProduto} />
-          <Route path="/inserir-pedido" component={InserirPedido} />
-          <Route path="/editar-produto" component={EditarProduto} />
-          <Route path="/editar-pedido" component={EditarPedido} />
-          <Route path="/excluir-produto" component={ExcluirProduto} />
-          <Route path="/excluir-pedido" component={ExcluirPedido} />
-        </Router>
-      </div>
-  );
-}
-
-
-export default Main;

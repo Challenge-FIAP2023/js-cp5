@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -6,12 +6,12 @@ function Login() {
   const [loggedIn, setLoggedIn] = useState(false);
 
   const handleLogin = () => {
-    // Verifique se o nome de usuário e a senha correspondem
+    // Verifica se o nome de usuário e a senha estão corretos
     if (username === 'Henri' && password === '1234') {
-      // Defina o estado de login como verdadeiro
+      // Define o estado de login como verdadeiro
       setLoggedIn(true);
 
-      // Armazene o estado de login na sessionStorage
+      // Armazena o estado de login na sessionStorage
       sessionStorage.setItem('isLoggedIn', 'true');
     }
   };
