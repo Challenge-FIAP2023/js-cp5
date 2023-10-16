@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import Produtos from './Produtos';
+import Pedido from './Pedido';
 
 function Login() {
   
@@ -22,7 +22,11 @@ function Login() {
 
   return (
     <section>
-      <h1>Login</h1>
+      {!getUser ? (
+      // Renderiza o h1 somente se não houver login
+        <h1>Login</h1>
+      ) : null}
+
       { !getSenha && !getUser ? (
         <form onSubmit={handleSubmit}>
 
@@ -39,7 +43,7 @@ function Login() {
 
         </form>
         ) : (
-        <Produtos />
+        <Pedido />
       )}
     </section>
   );
