@@ -6,9 +6,11 @@ function Nav() {
   // Hook - useNavigate
   const navigate = useNavigate();
 
-  const handleLoginClick = () => {
-    // Redirecionar para a tela de Pedido quando "Login" é clicado
-    navigate('/pedido');
+  const handleLogout = async () => {
+    sessionStorage.removeItem('useData');
+    sessionStorage.removeItem('passwordData');
+    alert("Saindo da sessão.");
+    navigate('/');
   }
 
   return (
@@ -22,7 +24,7 @@ function Nav() {
           <li><Link to="/produtos">Produtos</Link></li>
           <li><Link to="/sobre">Sobre</Link></li>
           <li><Link to="/login">Login</Link></li>
-          <button onClick={handleLoginClick}>Login</button>
+          <button onClick={handleLogout}>Logout</button>
         </ul>
       </nav>
     </header>
