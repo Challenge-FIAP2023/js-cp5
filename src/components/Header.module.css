@@ -19,14 +19,14 @@ header {
 }
 
 .headerContent img {
-    width: 70px;
+    width: 100px;
 }
 
 .restaurantName {
-    color: var(--cor-primaria);
+    color: var(--cor-secundaria);
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
     font-size: 1.3em;
 }
 

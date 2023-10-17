@@ -1,6 +1,6 @@
 import {  } from 'react';
 import { Link } from 'react-router-dom'
-import logo from '../assets/img/icon.png';
+import logo from '../assets/img/logo.png';
 import style from './Footer.module.css';
 import { MdEmail as EmailIcon } from "react-icons/md";
 import { AiFillInstagram as InstagramIcon, AiFillFacebook as FacebookIcon, AiFillLinkedin as LinkedinIcon } from "react-icons/ai";
@@ -17,7 +17,7 @@ function Footer() {
             <img src={logo} alt="Logo do restaurante" className={style.footerLogo}/>
             
             <div className={style.footerMenu}>
-              <h2>Sakura Sushi Bar</h2>
+              <h2>Site Links</h2>
               <nav className={style.menuLinksContainer}>
                 <ul>
                   <li><Link to="/" ><span className={style.linksText}>Home</span></Link></li>
