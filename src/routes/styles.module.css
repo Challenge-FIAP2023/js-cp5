@@ -1,0 +1,15 @@
+:root {
+    --cor-primaria: #E74C3C;
+    --cor-secundaria: #FFFFFF;
+    --cor-terciaria: #121212;
+}
+
+section {
+    width: 100%;
+}
+
+.slideItem{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
