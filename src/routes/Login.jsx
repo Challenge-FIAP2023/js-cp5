@@ -6,7 +6,7 @@ function Login() {
   const user = useRef();
   const password = useRef();
   const getUser = sessionStorage.getItem('userData');
-  const getSenha = sessionStorage.getItem('senhaData');
+  const getSenha = sessionStorage.getItem('passwordData');
 
   const handleSubmit = () => {
     if (user.current.value === 'henri' && password.current.value === '1234') {
@@ -22,26 +22,24 @@ function Login() {
 
   return (
     <section>
-      {!getUser ? (
-      // Renderiza o h1 somente se não houver login
-        <h1>Login</h1>
-      ) : null}
-
       { !getSenha && !getUser ? (
-        <form onSubmit={handleSubmit}>
+        <>
+          <h1>Login</h1>
+          <form onSubmit={handleSubmit}>
 
-          <p>
-            Usuário:
-            <input type="text" ref={user} />
-          </p>
-
-          <p> Senha:
-            <input type="password" ref={password} />
+            <p>
+              Usuário:
+              <input type="text" ref={user} />
             </p>
 
-          <input type="submit" value="Login" />
+            <p> Senha:
+              <input type="password" ref={password} />
+              </p>
 
-        </form>
+            <input type="submit" value="Login" />
+
+          </form>
+        </>
         ) : (
         <Pedido />
       )}

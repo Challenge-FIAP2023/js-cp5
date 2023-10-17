@@ -1,10 +1,12 @@
 import { Link, useNavigate } from 'react-router-dom';
-import './components.module.css';
+import style from './Header.module.css';
+import logo from '../assets/img/icon.png'
 
 function Nav() {
   const navigate = useNavigate();
 
   const getUser = sessionStorage.getItem('userData');
+  const getPassword = sessionStorage.getItem('passwordData');
 
   const handleLogout = async () => {
     sessionStorage.removeItem('userData');
@@ -15,20 +17,23 @@ function Nav() {
 
   return (
     <header>
-      <h2>Sakura Sushi Bar</h2>
-      <div className="header-menu">
-        <nav>
+      <div className={style.headerContent}>
+        <div className={style.restaurantName}>
+          <img src={logo} alt="Logo do restaurante" />
+          <h2>Sakura Sushi Bar</h2>
+        </div>
+        <nav className={style.headerMenu}>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/produtos">Produtos</Link></li>
-            <li><Link to="/sobre">Sobre</Link></li>
-            {getUser ? (
+            <li><Link to="/" className={style.menuText}>Home</Link></li>
+            <li><Link to="/sobre" className={style.menuText}>Sobre</Link></li>
+            <li><Link to="/produtos" className={style.menuText}>Produtos</Link></li>
+            {getUser && getPassword ? (
               <>
-                <li><Link to="/pedido">Pedido</Link></li>
-                <li><button onClick={handleLogout}>Logout</button></li>
+                <li><Link to="/login" className={style.menuText}>Pedido</Link></li>
+                <li><button onClick={handleLogout} className={style.logoutBtn}>Logout</button></li>
               </>
             ) : (
-              <li><Link to="/login">Login</Link></li>
+              <li><Link to="/login" className={style.menuText}>Login</Link></li>
             )}
           </ul>
         </nav>

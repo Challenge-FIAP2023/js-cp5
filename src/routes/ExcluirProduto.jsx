@@ -4,7 +4,9 @@ function ExcluirProduto() {
 
   return (
     <>
-      
+      <section>
+        <h1>EXCLUIR PRODUTO</h1>
+      </section>
     </>
   )
 }

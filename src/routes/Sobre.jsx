@@ -1,4 +1,7 @@
 import {  } from 'react';
+import FotoVictor from '../assets/img/foto-victor.jpeg'
+import FotoHenri from '../assets/img/foto-henri.webp'
+import sobreStyles from './styles.module.css'
 
 function Sobre() {
 
@@ -6,8 +9,14 @@ function Sobre() {
     <>
       <section>
         <h1>Sobre Nós</h1>
-        <h2>Desenvolvedores: </h2>
-        <p>Victor Marcondes Nuzzi e Henri de Oliveira Lopes</p>
+        <div className={sobreStyles.fotoContainer}>
+          <img src={FotoVictor} alt="Foto do Victor" />
+          <p>Victor Marcondes Nuzzi</p>
+        </div>
+        <div className={sobreStyles.fotoContainer}>
+          <img src={FotoHenri} alt="Foto do Henri" />
+          <p>Henri de Oliveira Lopes</p>
+        </div>
       </section>
     </>
   )

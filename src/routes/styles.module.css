@@ -1,15 +1,36 @@
 :root {
     --cor-primaria: #E74C3C;
     --cor-secundaria: #FFFFFF;
-    --cor-terciaria: #121212;
+    --cor-terciaria: #232323;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 section {
     width: 100%;
+    padding: 4%;
 }
 
 .slideItem{
     width: 100%;
     height: 600px;
     object-fit: cover;
+}
+
+/* --------------------- Sobre --------------------- */
+
+.fotoContainer {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+.fotoContainer img {
+    height: 300px;
+    width: 300px;
 }

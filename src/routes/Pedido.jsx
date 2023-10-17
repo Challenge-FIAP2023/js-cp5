@@ -5,7 +5,7 @@ function Pedido() {
   return (
     <>
       <section>
-        <h1>Pedido</h1>
+        <h1>PEDIDO</h1>
       </section>
     </>
   )
