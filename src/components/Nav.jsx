@@ -26,9 +26,9 @@ function Nav() {
           <ul>
             <li><Link to="/" className={style.menuText}>Home</Link></li>
             <li><Link to="/sobre" className={style.menuText}>Sobre</Link></li>
-            <li><Link to="/produtos" className={style.menuText}>Produtos</Link></li>
             {getUser && getPassword ? (
               <>
+                <li><Link to="/produtos" className={style.menuText}>Produtos</Link></li>
                 <li><Link to="/login" className={style.menuText}>Pedido</Link></li>
                 <li><button onClick={handleLogout} className={style.logoutBtn}>Logout</button></li>
               </>
