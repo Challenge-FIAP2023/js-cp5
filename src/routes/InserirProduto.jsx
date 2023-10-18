@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ListaProdutos } from './Pedido.jsx';
+import { ListaProdutos } from './Produtos.jsx';
 import { useNavigate } from 'react-router-dom';
 import baseStyle from './base.module.css';
 

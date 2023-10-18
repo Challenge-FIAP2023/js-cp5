@@ -56,6 +56,7 @@ header {
     border-radius: 18px;
     transition: .7s;
     letter-spacing: 1.5px;
+    font-weight: bold;
 }
 
 .logoutBtn:hover {
