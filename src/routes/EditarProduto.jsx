@@ -5,7 +5,6 @@ import { useState } from 'react';
 function EditarProduto() {
 
   const { id } = useParams();
-
   const navigate = useNavigate();
 
   const recProdutoListaById = ListaProdutos.filter((item) => item.id == id);

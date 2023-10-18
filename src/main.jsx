@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       { path: '/cadastrar/pedido', element: <InserirPedido /> },
       { path: '/editar/produtos/:id', element: <EditarProduto /> },
       { path: '/editar/pedido/:id', element: <EditarPedido /> },
-      { path: '/excluirproduto/produtos', element: <ExcluirProduto /> },
+      { path: '/excluir/produtos/:id', element: <ExcluirProduto /> },
       { path: '/excluir/pedido/:id', element: <ExcluirPedido /> },
     ],
   },
