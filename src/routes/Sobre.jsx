@@ -1,6 +1,6 @@
 import {  } from 'react';
 import FotoVictor from '../assets/img/foto-victor.jpeg'
-import FotoHenri from '../assets/img/foto-henri.webp'
+import FotoHenri from '../assets/img/foto-henri.jpeg'
 import sobreStyles from './styles.module.css'
 
 function Sobre() {
