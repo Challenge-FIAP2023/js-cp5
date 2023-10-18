@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ListaProdutos } from '../components/ListaProdutos';
+import { ListaProdutos } from './Pedido.jsx';
 import { useNavigate } from 'react-router-dom';
 import baseStyle from './base.module.css';
 
@@ -32,68 +32,70 @@ function Inserir() {
   };
 
   return (
-    <section className={baseStyle.sectionContainer}>
-      <h1>Cadastro de Produtos</h1>
-      {/*chando a função handleSubmit dentro do form */}
-      <form onSubmit={handleSubmit}>
-        <fieldset>
-          <legend>PRODUTO</legend>
-          <p>
-            <label htmlFor="idNome"> Nome do Produto:</label>
-            <input
-              type="text"
-              name="nome"
-              id="idNome"
-           
-              value={produto.nome}
+    <>
+      <section className={baseStyle.sectionContainer}>
+        <h1>Cadastro de Produtos</h1>
+
+        <form onSubmit={handleSubmit}>
+          <fieldset>
+            <legend>PRODUTO</legend>
+            <p>
+              <label htmlFor="idNome"> Nome do Produto:</label>
+              <input
+                type="text"
+                name="nome"
+                id="idNome"
+            
+                value={produto.nome}
+                
+                onChange={handleChange}
+              />
+            </p>
+            <p>
+              <label htmlFor="idQuant"> Quantidade do Produto:</label>
+              <input
+                type="number"
+                name="quant"
+                id="idQuant"
+            
+                value={produto.quant}
+                
+                onChange={handleChange}
+              />
+            </p>
+            <p>
+              <label htmlFor="idDesc">Descrição Produto:</label>
+              <input
+                type="text"
+                name="desc"
+                id="idDesc"
+                
+                value={produto.desc}
               
-              onChange={handleChange}
-            />
-          </p>
-          <p>
-            <label htmlFor="idQuant"> Quantidade do Produto:</label>
-            <input
-              type="number"
-              name="quant"
-              id="idQuant"
-           
-              value={produto.quant}
+                onChange={handleChange}
+              />
+            </p>
+            <p>
+              <label htmlFor="idValor"> Valor do Produto:</label>
+              <input
+                type="text"
+                name="valor"
+                id="idValor"
+                
+                value={produto.valor}
               
-              onChange={handleChange}
-            />
-          </p>
-          <p>
-            <label htmlFor="idDesc">Descrição Produto:</label>
-            <input
-              type="text"
-              name="desc"
-              id="idDesc"
-              
-              value={produto.desc}
-             
-              onChange={handleChange}
-            />
-          </p>
-          <p>
-            <label htmlFor="idValor"> Valor do Produto:</label>
-            <input
-              type="text"
-              name="valor"
-              id="idValor"
-              
-              value={produto.valor}
-             
-              onChange={handleChange}
-            />
-          </p>
-          <p>
-            <button type="submit">
-              CADASTRAR
-            </button>
-          </p>
-        </fieldset>
-      </form>
-    </section>
+                onChange={handleChange}
+              />
+            </p>
+            <p>
+              <button type="submit">
+                CADASTRAR
+              </button>
+            </p>
+          </fieldset>
+        </form>
+      </section>    
+    </>
   );
 }
 export default Inserir;

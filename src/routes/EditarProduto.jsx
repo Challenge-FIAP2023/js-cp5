@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import { ListaProdutos } from '../components/ListaProdutos';
+import { ListaProdutos } from './Produtos.jsx';
 import { useState } from 'react';
 import baseStyle from './base.module.css';
 
@@ -17,8 +17,6 @@ function EditarProduto() {
     desc: recProdutoListaById[0].desc,
     valor: recProdutoListaById[0].valor,
   });
-
-  /*funções */
 
   const handleSubmit = (event) => {
     event.preventDefault();

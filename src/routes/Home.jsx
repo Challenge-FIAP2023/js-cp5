@@ -14,7 +14,7 @@ function Home() {
   const imagens = [
     {id:'1', image:'./src/assets/img/niguiris.jpg', name:'Niguiris Tradicionais', description:'A simplicidade elevada a um nível sublime. Peixes frescos sobre almofadas de arroz perfeito.', price:'R$ 34,99'},
     {id:'2', image:'./src/assets/img/guiozas.jpg', name:'Guiozas Grelhados', description:'Um aperitivo irresistível. Crocante por fora, suculento por dentro. ', price:'R$ 22,99'},
-    {id:'3', image:'./src/assets/img/hossomakis.jpg', name:'Hossomakis Frescos', description:'Um banquete de sabor em cada mordida. A combinação perfeita de arroz e frescor.', price:'R$ 28,99'},
+    {id:'3', image:'./src/assets/img/bowl.jpg', name:'Bowl de Frutos do Mar', description:'Uma experiência culinária repleta de delícias do mar. Desfrute de uma mistura harmoniosa de peixes frescos, camarões suculentos e molho especial, tudo sobre uma cama de arroz perfeito.', price:'R$ 48,99'},
     {id:'4', image:'./src/assets/img/combinado.jpg', name:'Combinado Sakura', description:'Uma explosão de sabores japoneses em um único prato. Delicie-se com nossas seleções variadas.', price:'R$ 47,99'}
   ];
 

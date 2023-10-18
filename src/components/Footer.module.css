@@ -74,7 +74,6 @@ footer {
 
 .socialMediaContainer svg {
     color: var(--cor-secundaria);
-    size: 70px;
     transition: .7s;
 }
 

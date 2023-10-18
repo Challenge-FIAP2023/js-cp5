@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import headerStyle from './header.module.css';
-import logo from '../assets/img/icon.png'
+import logo from '../assets/img/icon.png';
 
 function Nav() {
   const navigate = useNavigate();

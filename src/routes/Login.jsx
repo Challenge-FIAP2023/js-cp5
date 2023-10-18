@@ -7,7 +7,7 @@ function Login() {
   const user = useRef();
   const password = useRef();
   const getUser = sessionStorage.getItem('userData');
-  const getSenha = sessionStorage.getItem('passwordData');
+  const getPassword = sessionStorage.getItem('passwordData');
 
   const handleSubmit = () => {
     if (user.current.value === 'henri' && password.current.value === '1234') {
@@ -23,7 +23,7 @@ function Login() {
 
   return (
     <section className={baseStyle.sectionContainer}>
-      { !getSenha && !getUser ? (
+      { !getPassword && !getUser ? (
         <>
           <h1>Login</h1>
           <form onSubmit={handleSubmit}>
