@@ -55,7 +55,7 @@ footer {
     transition: .7s;
 }
 
-.linksText :hover {
+.linksText:hover {
     color: var(--cor-primaria);   
 }
 
@@ -75,9 +75,10 @@ footer {
 .socialMediaContainer svg {
     color: var(--cor-secundaria);
     size: 70px;
+    transition: .7s;
 }
 
-.socialMediaContainer a :hover {
+.socialMediaContainer svg:hover {
     color: var(--cor-primaria);
 }
 

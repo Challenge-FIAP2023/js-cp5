@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { ListaProdutos } from '../components/ListaProdutos';
-
+import baseStyle from './base.module.css';
 
 function ExcluirProduto() {
   /*Hooks- useParams e Navigate */
@@ -31,7 +31,7 @@ function ExcluirProduto() {
   };
 
   return (
-    <section>
+    <section className={baseStyle.sectionContainer}>
       <h1>Excluir Produto</h1>
       <div>
         <p>Nome : {produto.nome}</p>

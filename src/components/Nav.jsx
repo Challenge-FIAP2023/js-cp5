@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import style from './Header.module.css';
+import headerStyle from './header.module.css';
 import logo from '../assets/img/icon.png'
 
 function Nav() {
@@ -17,23 +17,23 @@ function Nav() {
 
   return (
     <header>
-      <div className={style.headerContent}>
-        <div className={style.restaurantName}>
+      <div className={headerStyle.headerContent}>
+        <div className={headerStyle.restaurantName}>
           <img src={logo} alt="Logo do restaurante" />
-          <h2>Sakura Sushi Bar</h2>
+          <h2>SAKURA SUSHI BAR</h2>
         </div>
-        <nav className={style.headerMenu}>
+        <nav className={headerStyle.headerMenu}>
           <ul>
-            <li><Link to="/" className={style.menuText}>Home</Link></li>
-            <li><Link to="/sobre" className={style.menuText}>Sobre</Link></li>
+            <li><Link to="/" className={headerStyle.menuText}>Home</Link></li>
+            <li><Link to="/sobre" className={headerStyle.menuText}>Sobre</Link></li>
             {getUser && getPassword ? (
               <>
-                <li><Link to="/produtos" className={style.menuText}>Produtos</Link></li>
-                <li><Link to="/login" className={style.menuText}>Pedido</Link></li>
-                <li><button onClick={handleLogout} className={style.logoutBtn}>Logout</button></li>
+                <li><Link to="/produtos" className={headerStyle.menuText}>Produtos</Link></li>
+                <li><Link to="/login" className={headerStyle.menuText}>Pedido</Link></li>
+                <li><button onClick={handleLogout} className={headerStyle.logoutBtn}>Logout</button></li>
               </>
             ) : (
-              <li><Link to="/login" className={style.menuText}>Login</Link></li>
+              <li><Link to="/login" className={headerStyle.menuText}>Login</Link></li>
             )}
           </ul>
         </nav>

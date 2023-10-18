@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { ListaProdutos } from '../components/ListaProdutos';
 import { useState } from 'react';
+import baseStyle from './base.module.css';
 
 function EditarProduto() {
 
@@ -37,7 +38,7 @@ function EditarProduto() {
   };
 
   return (
-    <section >
+    <section className={baseStyle.sectionContainer}>
       <h1 >EDITAR PRODUTOS</h1>
       <form onSubmit={handleSubmit}>
         <fieldset>

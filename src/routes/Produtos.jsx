@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { HiPencil as Editar } from 'react-icons/hi';
 import { BsFillTrash3Fill as Excluir } from 'react-icons/bs';
 import { ListaProdutos } from '../components/ListaProdutos';
+import baseStyle from './base.module.css';
 
 function Produtos() {
 
@@ -10,7 +11,7 @@ function Produtos() {
 
   return (
     <>
-      <section>
+      <section className={baseStyle.sectionContainer}>
         <h1>Produtos</h1>
         <div>
           <table>

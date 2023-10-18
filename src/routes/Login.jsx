@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import Pedido from './Pedido';
+import baseStyle from './base.module.css';
 
 function Login() {
   
@@ -21,7 +22,7 @@ function Login() {
   };
 
   return (
-    <section>
+    <section className={baseStyle.sectionContainer}>
       { !getSenha && !getUser ? (
         <>
           <h1>Login</h1>

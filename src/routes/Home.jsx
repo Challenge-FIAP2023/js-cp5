@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination';
-import styles from './styles.module.css';
+import baseStyle from './base.module.css';
+import homeStyle from './home.module.css';
 
 
 function Home() {
@@ -11,10 +12,10 @@ function Home() {
   const [slidePreview, setSlidePreview] = useState(1);
 
   const imagens = [
-    {id:'1', image:'./src/assets/img/niguiris.jpg', text:'Niguiris Autênticos: A simplicidade elevada a um nível sublime. Peixes frescos sobre almofadas de arroz perfeito.', price:'R$ 34,99'},
-    {id:'2', image:'./src/assets/img/guiozas.jpg', text:'Guioza Grelhada: Um aperitivo irresistível. Crocante por fora, suculento por dentro. ', price:'R$ 22,99'},
-    {id:'3', image:'./src/assets/img/hossomakis.jpg', text:'Hossomakis Frescos: Um banquete de sabor em cada mordida. A combinação perfeita de arroz e frescor.', price:'R$ 28,99'},
-    {id:'4', image:'./src/assets/img/combinado.jpg', text:'Combinado Especial: Uma explosão de sabores japoneses em um único prato. Delicie-se com nossas seleções variadas', price:'R$ 47,99'}
+    {id:'1', image:'./src/assets/img/niguiris.jpg', name:'Niguiris Tradicionais', description:'A simplicidade elevada a um nível sublime. Peixes frescos sobre almofadas de arroz perfeito.', price:'R$ 34,99'},
+    {id:'2', image:'./src/assets/img/guiozas.jpg', name:'Guiozas Grelhados', description:'Um aperitivo irresistível. Crocante por fora, suculento por dentro. ', price:'R$ 22,99'},
+    {id:'3', image:'./src/assets/img/hossomakis.jpg', name:'Hossomakis Frescos', description:'Um banquete de sabor em cada mordida. A combinação perfeita de arroz e frescor.', price:'R$ 28,99'},
+    {id:'4', image:'./src/assets/img/combinado.jpg', name:'Combinado Sakura', description:'Uma explosão de sabores japoneses em um único prato. Delicie-se com nossas seleções variadas.', price:'R$ 47,99'}
   ];
 
   useEffect(()=>{
@@ -35,11 +36,17 @@ function Home() {
     } 
   }, [])
 
+  const scrollToCardapio = () => {
+    const cardapioSection = document.getElementById('cardapio');
+    if (cardapioSection) {
+      cardapioSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+
   return (
     <>
-      <section>
-        <h1>Sakura Sushi Bar</h1>
-        <p>Bem-Vindo ao Sakura Sushi Bar - Sabor e Tradição Japonesa no Seu Prato</p>
+      <section className={homeStyle.sectionSlideShow}>
         <Swiper
           slidePreview={slidePreview}
           pagination={{clickable:true}}
@@ -47,19 +54,81 @@ function Home() {
         >
           {imagens.map((item) =>(       
             <SwiperSlide key={item.id}>
-              <img src={item.image} alt="slide" className={styles.slideItem}/>
-              <p>{item.text}</p>
-              <p>{item.price}</p>
-              <a href="#menu">Ver menu completo</a>
+              <div className={homeStyle.slideContainer}>
+                <img src={item.image} alt="slide" className={homeStyle.slideItem}/>
+                <div className={homeStyle.slideContentContainer}>
+                  <h2 className={homeStyle.slideTittle}>SAKURA SUSHI BAR</h2>
+                  <p className={homeStyle.slideText}>Descubra o sabor autêntico do Japão. Delicie-se com nossos pratos exclusivos.</p>
+                  <button onClick={scrollToCardapio} className={homeStyle.slideBtn}>Ver cardápio completo</button>
+                </div>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
-      </section>
+      </section >
 
-      <section id='menu'>
-        <h2>Menu</h2>
+      <section className={`${baseStyle.sectionContainer} ${homeStyle.sectionMenu} ${homeStyle.lightGray}`} id='cardapio'>
 
         {/* ---------------------- CARDS ---------------------- */}
+
+        <div className={homeStyle.menuText}>
+          <h2 className={homeStyle.menuTittle}>Cardápio</h2>
+          <p className={homeStyle.menuTittleDescription}>Desfrute de nossos pratos únicos, desde os Niguiris Tradicionais à simplicidade sublime das almofadas de arroz perfeito até os irresistíveis Guiozas Grelhados, sempre crocantes por fora e suculentos por dentro. Não deixe de experimentar os Hossomakis Frescos, um banquete de sabores em cada mordida, e o Combinado Sakura, uma explosão de autenticidade japonesa a preços acessíveis!</p>
+        </div>
+
+        <div className={homeStyle.cardsContainer}>
+
+          <div className={homeStyle.cardsColumn}>
+
+            {/* ---------- CARD 1 ---------- */}
+            <div className={homeStyle.cardContainer}>
+              <div className={homeStyle.imgContainer}>
+                <img src={imagens[3].image} alt="Foto do combinado sakura" />
+              </div>
+              <div className={homeStyle.textContainer}>
+                <h2 className={homeStyle.tittle}>{imagens[3].name}</h2>
+                <p className={homeStyle.description}>{imagens[3].description}</p>
+                <p className={homeStyle.price}>{imagens[3].price}</p>
+              </div>
+            </div>
+            {/* ---------- CARD 2 ---------- */}
+            <div className={homeStyle.cardContainer}>
+              <div className={homeStyle.imgContainer}>
+                <img src={imagens[1].image} alt="Foto dos niguiris" />
+              </div>
+              <div className={homeStyle.textContainer}>
+                <h2 className={homeStyle.tittle}>{imagens[1].name}</h2>
+                <p className={homeStyle.description}>{imagens[1].description}</p>
+                <p className={homeStyle.price}>{imagens[1].price}</p>
+              </div>
+            </div>
+          </div>
+
+          <div className={homeStyle.cardsColumn}>
+            {/* ---------- CARD 3 ---------- */}
+            <div className={homeStyle.cardContainer}>
+              <div className={homeStyle.imgContainer}>
+                <img src={imagens[0].image} alt="Foto do guiozas" />
+              </div>
+              <div className={homeStyle.textContainer}>
+                <h2 className={homeStyle.tittle}>{imagens[0].name}</h2>
+                <p className={homeStyle.description}>{imagens[0].description}</p>
+                <p className={homeStyle.price}>{imagens[0].price}</p>
+              </div>
+            </div>
+            {/* ---------- CARD 4 ---------- */}
+            <div className={homeStyle.cardContainer}>
+              <div className={homeStyle.imgContainer}>
+                <img src={imagens[2].image} alt="Foto dos hossomakis" />
+              </div>
+              <div className={homeStyle.textContainer}>
+                <h2 className={homeStyle.tittle}>{imagens[2].name}</h2>
+                <p className={homeStyle.description}>{imagens[2].description}</p>
+                <p className={homeStyle.price}>{imagens[2].price}</p>
+              </div>
+            </div>
+                    </div>
+          </div>
       
       </section>
     </>

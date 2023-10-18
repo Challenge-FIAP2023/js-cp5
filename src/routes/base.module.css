@@ -1,0 +1,17 @@
+:root {
+    --cor-primaria: #d3502c;
+    --cor-secundaria: #FFFFFF;
+    --cor-terciaria: #232323;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.sectionContainer {
+    width: 100%;
+    padding: 4% 6%;
+}

@@ -1,0 +1,13 @@
+/* --------------------- Sobre --------------------- */
+
+.fotoContainer {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+.fotoContainer img {
+    height: 300px;
+    width: 300px;
+}

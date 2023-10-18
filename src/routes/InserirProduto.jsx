@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ListaProdutos } from '../components/ListaProdutos';
 import { useNavigate } from 'react-router-dom';
-
+import baseStyle from './base.module.css';
 
 function Inserir() {
   
@@ -32,7 +32,7 @@ function Inserir() {
   };
 
   return (
-    <section>
+    <section className={baseStyle.sectionContainer}>
       <h1>Cadastro de Produtos</h1>
       {/*chando a função handleSubmit dentro do form */}
       <form onSubmit={handleSubmit}>
