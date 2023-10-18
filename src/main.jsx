@@ -17,26 +17,26 @@ import ExcluirProduto from './routes/ExcluirProduto.jsx';
 import ExcluirPedido from './routes/ExcluirPedido.jsx';
 
 
-const router = createBrowserRouter ([
+const router = createBrowserRouter([
   {
-    path: '/', element: <App/>,
+    path: '/',
+    element: <App />,
     errorElement: <Error />,
-
     children: [
-      {path:'/', element:<Home />},
-      {path:'/login', element:<Login />},
-      {path:'/produtos', element:<Produtos />},
-      {path:'/sobre', element:<Sobre />},
-      {path:'/pedidos', element:<Pedido />},
-      {path:'/cadastrar/produto', element:<InserirProduto />},
-      {path:'/cadastrar/pedido', element:<InserirPedido />},
-      {path:'/editar/produtos/:id', element:<EditarProduto />},
-      {path:'/editar/pedido/:id', element:<EditarPedido />},
-      {path:'/excluir/produtos/id:', element:<ExcluirProduto />},
-      {path:'/excluir/pedido/:id', element:<ExcluirPedido />},
-    ]
-  }
-])
+      { path: '/', element: <Home /> },
+      { path: '/login', element: <Login /> },
+      { path: '/produtos', element: <Produtos /> },
+      { path: '/sobre', element: <Sobre /> },
+      { path: '/pedidos', element: <Pedido /> },
+      { path: '/cadastrar/produto', element: <InserirProduto /> },
+      { path: '/cadastrar/pedido', element: <InserirPedido /> },
+      { path: '/editar/produtos/:id', element: <EditarProduto /> },
+      { path: '/editar/pedido/:id', element: <EditarPedido /> },
+      { path: '/excluirproduto/produtos', element: <ExcluirProduto /> },
+      { path: '/excluir/pedido/:id', element: <ExcluirPedido /> },
+    ],
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
