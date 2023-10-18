@@ -36,7 +36,18 @@ function Pedido() {
 
         {ListaPedido.map((pedido) => (
           <div key={pedido.id}>
-            <h2>Pedido ID: {pedido.id}</h2>
+            <h2>Pedido ID: {pedido.id}
+
+            <Link to={`/editar/pedido/${pedido.id}`}>
+              <Editar />
+            </Link>
+
+            <Link to={`/excluir/pedido/${pedido.id}`}>
+              <Excluir />
+            </Link>
+
+            </h2>
+            
             <table>
               <thead>
                 <tr>
@@ -45,8 +56,6 @@ function Pedido() {
                   <th>Nome</th>
                   <th>Descrição</th>
                   <th>Preço</th>
-                  <th>Editar</th>
-                  <th>Excluir</th>
                 </tr>
               </thead>
               <tbody>
@@ -57,16 +66,6 @@ function Pedido() {
                     <td>{produto.nome}</td>
                     <td>{produto.desc}</td>
                     <td>{produto.valor}</td>
-                    <td>
-                      <Link to={`/editar/pedido/${pedido.id}`}>
-                        <Editar />
-                      </Link>
-                    </td>
-                    <td>
-                      <Link to={`/excluir/pedido/${pedido.id}`}>
-                        <Excluir />
-                      </Link>
-                    </td>
                   </tr>
                 ))}
               </tbody>
