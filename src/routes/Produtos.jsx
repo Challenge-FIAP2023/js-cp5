@@ -21,7 +21,8 @@ function Produtos() {
                 <th>Nome</th>
                 <th>Descrição</th>
                 <th>Preço</th>
-                <th>Editar / Excluir</th>
+                <th>Editar</th>
+                <th>Excluir</th>
               </tr>
             </thead>
             <tbody>
@@ -34,10 +35,12 @@ function Produtos() {
                   <td>{item.desc}</td>
                   <td>{item.valor}</td>
                   <td>
-                    <Link to={`/editar/produtos/${item.id}`}>
+                    <Link to={`/editar/produto/${item.id}`}>
                       <Editar />
                     </Link>
-                    <Link to={`/excluir/produtos/${item.id}`}>
+                  </td>
+                  <td>
+                    <Link to={`/excluir/produto/${item.id}`}>
                       <Excluir />
                     </Link>
                   </td>
