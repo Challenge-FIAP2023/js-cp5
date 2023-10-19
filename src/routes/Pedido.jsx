@@ -17,7 +17,7 @@ function Pedido() {
      {
        id: 1,
        produtos: [
-         { id: ListaProdutos[0].id, nome: ListaProdutos[0].nome, quant: ListaProdutos[0].quant, desc: ListaProdutos[0].desc, valor: ListaProdutos[0].valor },
+       { id: ListaProdutos[0].id, nome: ListaProdutos[0].nome, quant: ListaProdutos[0].quant, desc: ListaProdutos[0].desc, valor: ListaProdutos[0].valor },
        { id: ListaProdutos[1].id, nome: ListaProdutos[1].nome, quant: ListaProdutos[1].quant, desc: ListaProdutos[1].desc, valor: ListaProdutos[1].valor },
        ],
      },
@@ -27,6 +27,12 @@ function Pedido() {
          { id: 3, nome: "Guioza", quant: 8, desc: "Pastéis japoneses recheados de carne e legumes.", valor: 18.99 },
        ],
      },
+     {
+      id: 3,
+      produtos: [
+        { id: "", nome: " ", quant: "", desc: "", valor: "" },
+      ],
+    },
   ];
 
   return (  

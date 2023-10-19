@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
 function EditarPedido() {
-  
   const navigate = useNavigate();
   const { } = useParams();
 
