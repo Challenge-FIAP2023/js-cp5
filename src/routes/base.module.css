@@ -2,6 +2,7 @@
     --cor-primaria: #d3502c;
     --cor-secundaria: #FFFFFF;
     --cor-terciaria: #232323;
+    --light-gray: #f7f7f7;
 }
 
 * {
@@ -11,7 +12,87 @@
     font-family: 'PT Sans', sans-serif;
 }
 
+/* Error Page */
+.errorPage {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+
+/* Base Section */
+
 .sectionContainer {
     width: 100%;
     padding: 4% 6%;
+    background-color: var(--light-gray);
+}
+
+/* Tables Style */
+
+.produtoPedidoContainer {
+    min-height: calc(80vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.produtoPedidoContainer h1 {
+    color: var(--cor-terciaria);
+    font-size: 2.6em;
+}
+
+.produtoPedidoContainer td {
+    text-align: center;
+}
+
+.tableContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 40px 20px;
+    border: 1px solid #3c3c3d;
+    box-shadow: 3px 3px 5px #888888;
+    padding: 2%;
+    border-radius: 10px;
+    background-color: var(--cor-secundaria);
+}
+
+table th {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.tableIcon {
+    color: var(--cor-primaria);
+    transition: .3s;
+}
+
+.tableIcon:hover {
+    color: var(--cor-terciaria);
+}
+
+
+.tableBtn {
+    padding: 10px 20px;
+    border-radius: 22px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    font-size: 1.4em;
+    transition: .7s;
+    letter-spacing: 1px;
+}
+
+.tableBtn:hover {
+    cursor: pointer;
+    background-color: transparent;
+    border: 3px solid var(--cor-terciaria);
+    color: var(--cor-terciaria);
 }

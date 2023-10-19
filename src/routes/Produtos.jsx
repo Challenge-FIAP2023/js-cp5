@@ -16,9 +16,9 @@ function Produtos() {
 
   return (
     <>
-      <section className={baseStyle.sectionContainer}>
+      <section className={`${baseStyle.sectionContainer} ${baseStyle.produtoPedidoContainer}`}>
         <h1>Produtos</h1>
-        <div>
+        <div className={baseStyle.tableContainer}>
           <table>
             <thead>
               <tr>
@@ -26,7 +26,7 @@ function Produtos() {
                 <th>Quantidade</th>
                 <th>Nome</th>
                 <th>Descrição</th>
-                <th>Preço</th>
+                <th>Preço (R$)</th>
                 <th>Editar</th>
                 <th>Excluir</th>
               </tr>
@@ -41,20 +41,20 @@ function Produtos() {
                   <td>{item.desc}</td>
                   <td>{item.valor}</td>
                   <td>
-                    <Link to={`/editar/produto/${item.id}`}>
-                      <Editar />
+                    <Link to={`/editar/produto/${item.id}`} className={baseStyle.tableIcon}>
+                      <Editar size={24}/>
                     </Link>
                   </td>
                   <td>
-                    <Link to={`/excluir/produto/${item.id}`}>
-                      <Excluir />
+                    <Link to={`/excluir/produto/${item.id}`} className={baseStyle.tableIcon}>
+                      <Excluir size={24}/>
                     </Link>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
-          <Link to={'/cadastrar/produto'}>Cadastrar novo produto</Link>
+          <Link to={'/cadastrar/produto'}><button className={baseStyle.tableBtn}>Cadastrar novo produto</button></Link>
         </div>
       </section>
     </>

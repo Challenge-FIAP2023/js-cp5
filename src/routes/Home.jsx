@@ -67,7 +67,7 @@ function Home() {
         </Swiper>
       </section >
 
-      <section className={`${baseStyle.sectionContainer} ${homeStyle.sectionMenu} ${homeStyle.lightGray}`} id='cardapio'>
+      <section className={`${baseStyle.sectionContainer} ${homeStyle.sectionMenu}`} id='cardapio'>
 
         {/* ---------------------- CARDS ---------------------- */}
 
