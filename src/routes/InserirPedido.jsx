@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ListaProdutos } from './Produtos.jsx';
+import { ListaPedidosOG } from './Pedido.jsx';
 import { useNavigate } from 'react-router-dom';
 import baseStyle from './base.module.css';
 
@@ -7,7 +8,7 @@ function InserirPedido() {
   const navigate = useNavigate();
 
   // Lista de pedidos (suponhamos que ela esteja em um contexto global)
-  const [ListaPedidos, setListaPedidos] = useState([
+  const ListaPedidos = useState([
     {
       id: 1,
       produtos: [
@@ -55,7 +56,7 @@ function InserirPedido() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Adicione o pedido à lista de pedidos
-    setListaPedidos([...ListaPedidos, pedido]);
+    setListaPedidos([...ListaPedidosOG, pedido]);
     navigate('/pedidos');
   };
 

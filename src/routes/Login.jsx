@@ -22,29 +22,34 @@ function Login() {
   };
 
   return (
-    <section className={baseStyle.sectionContainer}>
-      { !getPassword && !getUser ? (
+    <>
+      {!getPassword && !getUser ? (
         <>
-          <h1>Login</h1>
-          <form onSubmit={handleSubmit}>
-
-            <p>
-              Usuário:
-              <input type="text" ref={user} />
-            </p>
-
-            <p> Senha:
-              <input type="password" ref={password} />
-              </p>
-
-            <input type="submit" value="Login" />
-
-          </form>
+          <section className={`${baseStyle.sectionContainer} ${baseStyle.loginContainer}`}>
+            <div className={baseStyle.loginContainer}>
+              <form onSubmit={handleSubmit} className={baseStyle.formContainer}>
+                <fieldset>
+                  <h1 className={baseStyle.formTittle}>Login</h1>
+                  <div className={baseStyle.formGroup}>
+                    <p className={baseStyle.loginLabel}>
+                      Usuário
+                      <input type="text" ref={user} /></p>
+                  </div>
+                  <div className={baseStyle.formGroup}>
+                    <p className={baseStyle.loginLabel}> Senha
+                      <input type="password" ref={password} />
+                    </p>
+                  </div>
+                  <input type="submit" value="Login" className={baseStyle.btnSubmit}/>
+                </fieldset>
+              </form>
+            </div>
+          </section>
         </>
         ) : (
         <Pedido />
       )}
-    </section>
+    </>
   );
 }
 

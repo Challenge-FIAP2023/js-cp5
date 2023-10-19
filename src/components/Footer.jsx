@@ -22,8 +22,8 @@ function Footer() {
                 <ul>
                   <li><Link to="/" ><span className={footerStyle.linksText}>Home</span></Link></li>
                   <li><Link to="/produtos" ><span className={footerStyle.linksText}>Produtos</span></Link></li>
-                  <li><Link to="/sobre" ><span className={footerStyle.linksText}>Sobre</span></Link></li>
                   <li><Link to="/login" ><span className={footerStyle.linksText}>Pedido</span></Link></li>
+                  <li><Link to="/sobre" ><span className={footerStyle.linksText}>Sobre</span></Link></li>
                 </ul>
               </nav>
             </div>

@@ -5,10 +5,10 @@ import { BsFillTrash3Fill as Excluir } from 'react-icons/bs';
 import baseStyle from './base.module.css';
 
 export const ListaProdutos = [
-  {id: 1, nome: "Niguiri", quant: 6, desc:"Sushi de arroz com peixe fresco.", valor: 28.99 },
-  {id: 2, nome: "Hot Roll", quant: 8, desc:"Sushi empanado com camarão e cream cheese.", valor: 22.99 },
-  {id: 3, nome: "Guioza", quant: 8, desc:"Pastéis japoneses recheados de carne e legumes.", valor: 18.99 },
-  {id: 4, nome: "Bowl", quant: 12, desc:"Rolinhos de alga nori com recheio de peixe e arroz.", valor: 29.99 },
+  {id: 1, nome: "Niguiri", quant: 6, desc:"Sushi de arroz com peixe fresco.", valor: 34.99 },
+  {id: 2, nome: "Combinado Sakura", quant: 8, desc:"Uma explosão de sabores japoneses em um único prato. Delicie-se com nossas seleções variadas.", valor: 47.99 },
+  {id: 3, nome: "Guioza", quant: 8, desc:"Pastéis japoneses recheados de carne e legumes.", valor: 22.99 },
+  {id: 4, nome: "Bowl", quant: 12, desc:"Uma deliciosa fusão de peixes frescos, camarões suculentos e molho especial sobre arroz perfeito.", valor: 48.99 },
 ];
 
 function Produtos() {
@@ -54,7 +54,7 @@ function Produtos() {
               ))}
             </tbody>
           </table>
-          <Link to={'/cadastrar/produto'}><button className={baseStyle.tableBtn}>Cadastrar novo produto</button></Link>
+          <Link to={'/cadastrar/produto'}><button className={baseStyle.btnSubmit}>Cadastrar novo produto</button></Link>
         </div>
       </section>
     </>

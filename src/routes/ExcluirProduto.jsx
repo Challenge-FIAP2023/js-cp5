@@ -31,23 +31,19 @@ function ExcluirProduto() {
   };
 
   return (
-    <section className={baseStyle.sectionContainer}>
-      <h1>Excluir Produto</h1>
-      <div>
-        <p>Nome : {produto.nome}</p>
-        <p>Quant : {produto.quant}</p>
-        <p>Desc : {produto.desc}</p>
-        <p>valor : {produto.valor}</p>
-      </div>
-      <div>
-        {/*chamando a função handleExclude dentro do botão*/}
-        <button onClick={handleExclude} >
-          EXCLUIR
-        </button>
-        {/*chamando o navigate para voltar para a tela produtos */}
-        <button onClick={() => navigate('/produtos')}>
-          CANCELAR
-        </button>
+    <section className={`${baseStyle.sectionContainer} ${baseStyle.produtoPedidoContainer}`}>
+      <div className={baseStyle.excluirContainer}>
+        <h1>Excluir Produto {produto.id}</h1>
+        <div className={baseStyle.excluirText}>
+          <p><span className={baseStyle.excluirTextTittle}>Nome:</span> {produto.nome}</p>
+          <p><span className={baseStyle.excluirTextTittle}>Quantidade:</span> {produto.quant}</p>
+          <p><span className={baseStyle.excluirTextTittle}>Descrição:</span> {produto.desc}</p>
+          <p><span className={baseStyle.excluirTextTittle}>Valor (R$):</span> {produto.valor}</p>
+        </div>
+        <div className={baseStyle.btnContainer}>
+          <button onClick={handleExclude} className={baseStyle.btnSubmit}>Excluir</button>
+          <button onClick={() => navigate('/produtos')} className={baseStyle.btnSubmit}>Cancelar</button>
+        </div>
       </div>
     </section>
   );

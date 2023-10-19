@@ -121,7 +121,7 @@
 /* Individual card */
 .cardContainer {
     display: flex;
-    width: 92%;
+    width: 700px;
     height: 300px;
     padding: 4%;
     gap: 24px;

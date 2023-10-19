@@ -36,63 +36,34 @@ function EditarProduto() {
   };
 
   return (
-    <section className={baseStyle.sectionContainer}>
-      <h1 >EDITAR PRODUTOS</h1>
-      <form onSubmit={handleSubmit}>
+    <section className={`${baseStyle.sectionContainer} ${baseStyle.produtoPedidoContainer}`}>
+      <form onSubmit={handleSubmit} className={baseStyle.formContainer}>
         <fieldset>
-          <legend>PRODUTO SELECIONADO</legend>
-          <div>
-            <input
-              type="hidden"
-              name="id"
-              value={produto.id}
-              onChange={handleChange}
-            />
+          <h1 className={baseStyle.formTittle}>Editar Produto {produto.id}</h1>
+
+          <div className={baseStyle.formGroup}>
+            <label htmlFor="idNome">Nome</label>
+            <input type="text" name="nome" id="idNome" value={produto.nome} onChange={handleChange} />
           </div>
-          <div>
-            <label htmlFor="idNome">Nome do Produto:</label>
-            <input
-              type="text"
-              name="nome"
-              id="idNome"
-              value={produto.nome}
-              onChange={handleChange}
-            />
+
+          <div className={baseStyle.formGroup}>
+            <label htmlFor="idQuant"> Quantidade</label>
+            <input type="number" name="quant" id="idQuant" value={produto.quant} onChange={handleChange} />
           </div>
-          <div>
-            <label htmlFor="idQuant"> Quantidade do Produto:</label>
-            <input
-              type="number"
-              name="quant"
-              id="idQuant"
-           
-              value={produto.quant}
-              
-              onChange={handleChange}
-            />
+          
+          <div className={baseStyle.formGroup}>
+            <label htmlFor="idDesc">Descrição</label>
+            <input type="text" name="desc" id="idDesc" value={produto.desc} onChange={handleChange} />
           </div>
-          <div>
-            <label htmlFor="idDesc">Descrição do Produto:</label>
-            <input
-              type="text"
-              name="desc"
-              id="idDesc"
-              value={produto.desc}
-              onChange={handleChange}
-            />
+
+          <div className={baseStyle.formGroup}>
+            <label htmlFor="idValor">Valor (R$)</label>
+            <input type="text" name="valor" id="idValor" value={produto.valor} onChange={handleChange} />
           </div>
-          <div>
-            <label htmlFor="idValor">Valor do Produto:</label>
-            <input
-              type="text"
-              name="valor"
-              id="idValor"
-              value={produto.valor}
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <button type="subtmit" >EDITAR</button>
+
+          <div className={baseStyle.btnContainer}>
+            <button type="subtmit" className={baseStyle.btnSubmit}>Editar</button>
+            <button onClick={() => navigate('/produtos')} className={baseStyle.btnSubmit}>Cancelar</button>
           </div>
         </fieldset>
       </form>

@@ -33,65 +33,37 @@ function Inserir() {
 
   return (
     <>
-      <section className={baseStyle.sectionContainer}>
-        <h1>Cadastro de Produtos</h1>
+      <section className={`${baseStyle.sectionContainer} ${baseStyle.produtoPedidoContainer}`}>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={baseStyle.formContainer}>
           <fieldset>
-            <legend>PRODUTO</legend>
-            <p>
-              <label htmlFor="idNome"> Nome do Produto:</label>
-              <input
-                type="text"
-                name="nome"
-                id="idNome"
+            <h1 className={baseStyle.formTittle}>Cadastro de Produto</h1>
             
-                value={produto.nome}
-                
-                onChange={handleChange}
-              />
-            </p>
-            <p>
-              <label htmlFor="idQuant"> Quantidade do Produto:</label>
-              <input
-                type="number"
-                name="quant"
-                id="idQuant"
+            <div className={baseStyle.formGroup}>
+              <label htmlFor="idNome"> Nome</label>
+              <input type="text" name="nome" id="idNome" value={produto.nome} onChange={handleChange}/>
+            </div>
+          
+            <div className={baseStyle.formGroup}>
+              <label htmlFor="idQuant"> Quantidade</label>
+              <input type="number" name="quant" id="idQuant" value={produto.quant} onChange={handleChange} />
+            </div>
+          
+            <div className={baseStyle.formGroup}>
+              <label htmlFor="idDesc">Descrição</label>
+              <input type="text" name="desc" id="idDesc" value={produto.desc}onChange={handleChange} />
+            </div>
+          
+            <div className={baseStyle.formGroup}>
+              <label htmlFor="idValor"> Valor (R$)</label>
+              <input type="text" name="valor" id="idValor" value={produto.valor} onChange={handleChange} />
+            </div>
+          
+          <div className={baseStyle.btnContainer}>
+            <button onClick={handleSubmit} className={baseStyle.btnSubmit}>Cadastrar</button>
+            <button onClick={() => navigate('/produtos')} className={baseStyle.btnSubmit}>Cancelar</button>
+          </div>
             
-                value={produto.quant}
-                
-                onChange={handleChange}
-              />
-            </p>
-            <p>
-              <label htmlFor="idDesc">Descrição Produto:</label>
-              <input
-                type="text"
-                name="desc"
-                id="idDesc"
-                
-                value={produto.desc}
-              
-                onChange={handleChange}
-              />
-            </p>
-            <p>
-              <label htmlFor="idValor"> Valor do Produto:</label>
-              <input
-                type="text"
-                name="valor"
-                id="idValor"
-                
-                value={produto.valor}
-              
-                onChange={handleChange}
-              />
-            </p>
-            <p>
-              <button type="submit">
-                CADASTRAR
-              </button>
-            </p>
           </fieldset>
         </form>
       </section>    

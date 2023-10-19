@@ -11,11 +11,18 @@ function Home() {
   /* Hook - useState */
   const [slidePreview, setSlidePreview] = useState(1);
 
-  const imagens = [
-    {id:'1', image:'./src/assets/img/niguiris.jpg', name:'Niguiris Tradicionais', description:'A simplicidade elevada a um nível sublime. Peixes frescos sobre almofadas de arroz perfeito.', price:'R$ 34,99'},
-    {id:'2', image:'./src/assets/img/guiozas.jpg', name:'Guiozas Grelhados', description:'Um aperitivo irresistível. Crocante por fora, suculento por dentro. ', price:'R$ 22,99'},
-    {id:'3', image:'./src/assets/img/bowl.jpg', name:'Bowl de Frutos do Mar', description:'Uma experiência culinária repleta de delícias do mar. Desfrute de uma mistura harmoniosa de peixes frescos, camarões suculentos e molho especial, tudo sobre uma cama de arroz perfeito.', price:'R$ 48,99'},
-    {id:'4', image:'./src/assets/img/combinado.jpg', name:'Combinado Sakura', description:'Uma explosão de sabores japoneses em um único prato. Delicie-se com nossas seleções variadas.', price:'R$ 47,99'}
+  const imagensSlide = [
+    {id:'1', image:'./src/assets/img/niguiris.jpg'},
+    {id:'2', image:'./src/assets/img/guiozas.jpg'},
+    {id:'3', image:'./src/assets/img/bowl.jpg'},
+    {id:'4', image:'./src/assets/img/combinado.jpg'}
+  ];
+
+  const imagensCard = [
+    {id:'1', image:'./src/assets/img/card-niguiris.jpg', name:'Niguiris Tradicionais', description:'A simplicidade elevada a um nível sublime. Peixes frescos sobre almofadas de arroz perfeito.', price:'R$ 34,99'},
+    {id:'2', image:'./src/assets/img/card-guiozas.jpg', name:'Guiozas Grelhados', description:'Um aperitivo irresistível. Crocante por fora, suculento por dentro. ', price:'R$ 22,99'},
+    {id:'3', image:'./src/assets/img/card-bowl.jpg', name:'Bowl de Frutos do Mar', description:'Uma deliciosa fusão de peixes frescos, camarões suculentos e molho especial sobre arroz perfeito.', price:'R$ 48,99'},
+    {id:'4', image:'./src/assets/img/card-combinado.jpg', name:'Combinado Sakura', description:'Uma explosão de sabores japoneses em um único prato. Delicie-se com nossas seleções variadas.', price:'R$ 47,99'}
   ];
 
   useEffect(()=>{
@@ -52,7 +59,7 @@ function Home() {
           pagination={{clickable:true}}
           navigation
         >
-          {imagens.map((item) =>(       
+          {imagensSlide.map((item) =>(       
             <SwiperSlide key={item.id}>
               <div className={homeStyle.slideContainer}>
                 <img src={item.image} alt="slide" className={homeStyle.slideItem}/>
@@ -83,23 +90,23 @@ function Home() {
             {/* ---------- CARD 1 ---------- */}
             <div className={homeStyle.cardContainer}>
               <div className={homeStyle.imgContainer}>
-                <img src={imagens[3].image} alt="Foto do combinado sakura" />
+                <img src={imagensCard[3].image} alt="Foto do combinado sakura" />
               </div>
               <div className={homeStyle.textContainer}>
-                <h2 className={homeStyle.tittle}>{imagens[3].name}</h2>
-                <p className={homeStyle.description}>{imagens[3].description}</p>
-                <p className={homeStyle.price}>{imagens[3].price}</p>
+                <h2 className={homeStyle.tittle}>{imagensCard[3].name}</h2>
+                <p className={homeStyle.description}>{imagensCard[3].description}</p>
+                <p className={homeStyle.price}>{imagensCard[3].price}</p>
               </div>
             </div>
             {/* ---------- CARD 2 ---------- */}
             <div className={homeStyle.cardContainer}>
               <div className={homeStyle.imgContainer}>
-                <img src={imagens[1].image} alt="Foto dos niguiris" />
+                <img src={imagensCard[1].image} alt="Foto dos niguiris" />
               </div>
               <div className={homeStyle.textContainer}>
-                <h2 className={homeStyle.tittle}>{imagens[1].name}</h2>
-                <p className={homeStyle.description}>{imagens[1].description}</p>
-                <p className={homeStyle.price}>{imagens[1].price}</p>
+                <h2 className={homeStyle.tittle}>{imagensCard[1].name}</h2>
+                <p className={homeStyle.description}>{imagensCard[1].description}</p>
+                <p className={homeStyle.price}>{imagensCard[1].price}</p>
               </div>
             </div>
           </div>
@@ -108,27 +115,27 @@ function Home() {
             {/* ---------- CARD 3 ---------- */}
             <div className={homeStyle.cardContainer}>
               <div className={homeStyle.imgContainer}>
-                <img src={imagens[0].image} alt="Foto do guiozas" />
+                <img src={imagensCard[0].image} alt="Foto do guiozas" />
               </div>
               <div className={homeStyle.textContainer}>
-                <h2 className={homeStyle.tittle}>{imagens[0].name}</h2>
-                <p className={homeStyle.description}>{imagens[0].description}</p>
-                <p className={homeStyle.price}>{imagens[0].price}</p>
+                <h2 className={homeStyle.tittle}>{imagensCard[0].name}</h2>
+                <p className={homeStyle.description}>{imagensCard[0].description}</p>
+                <p className={homeStyle.price}>{imagensCard[0].price}</p>
               </div>
             </div>
             {/* ---------- CARD 4 ---------- */}
             <div className={homeStyle.cardContainer}>
               <div className={homeStyle.imgContainer}>
-                <img src={imagens[2].image} alt="Foto dos hossomakis" />
+                <img src={imagensCard[2].image} alt="Foto dos hossomakis" />
               </div>
               <div className={homeStyle.textContainer}>
-                <h2 className={homeStyle.tittle}>{imagens[2].name}</h2>
-                <p className={homeStyle.description}>{imagens[2].description}</p>
-                <p className={homeStyle.price}>{imagens[2].price}</p>
+                <h2 className={homeStyle.tittle}>{imagensCard[2].name}</h2>
+                <p className={homeStyle.description}>{imagensCard[2].description}</p>
+                <p className={homeStyle.price}>{imagensCard[2].price}</p>
               </div>
             </div>
-                    </div>
           </div>
+        </div>
       
       </section>
     </>
