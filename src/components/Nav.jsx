@@ -25,15 +25,18 @@ function Nav() {
         <nav className={headerStyle.headerMenu}>
           <ul>
             <li><Link to="/" className={headerStyle.menuText}>Home</Link></li>
-            <li><Link to="/sobre" className={headerStyle.menuText}>Sobre</Link></li>
             {getUser && getPassword ? (
               <>
                 <li><Link to="/produtos" className={headerStyle.menuText}>Produtos</Link></li>
                 <li><Link to="/login" className={headerStyle.menuText}>Pedido</Link></li>
+                <li><Link to="/sobre" className={headerStyle.menuText}>Sobre</Link></li>
                 <li><button onClick={handleLogout} className={headerStyle.logoutBtn}>Logout</button></li>
               </>
             ) : (
-              <li><Link to="/login" className={headerStyle.menuText}>Login</Link></li>
+              <>
+                <li><Link to="/sobre" className={headerStyle.menuText}>Sobre</Link></li>
+                <li><Link to="/login" className={headerStyle.menuText}>Login</Link></li>
+              </>
             )}
           </ul>
         </nav>
