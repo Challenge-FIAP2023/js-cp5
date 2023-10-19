@@ -78,10 +78,7 @@ function Home() {
 
         {/* ---------------------- CARDS ---------------------- */}
 
-        <div className={homeStyle.menuText}>
-          <h2 className={homeStyle.menuTittle}>Cardápio</h2>
-          <p className={homeStyle.menuTittleDescription}>Desfrute de nossos pratos únicos, desde os Niguiris Tradicionais à simplicidade sublime das almofadas de arroz perfeito até os irresistíveis Guiozas Grelhados, sempre crocantes por fora e suculentos por dentro. Não deixe de experimentar os Hossomakis Frescos, um banquete de sabores em cada mordida, e o Combinado Sakura, uma explosão de autenticidade japonesa a preços acessíveis!</p>
-        </div>
+        <h2 className={homeStyle.menuTittle}>Cardápio</h2>
 
         <div className={homeStyle.cardsContainer}>
 

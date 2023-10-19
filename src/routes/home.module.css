@@ -81,14 +81,6 @@
 
 /* Cards Text */
 
-.menuText {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-
 .menuTittle {
     color: var(--cor-primaria);
     font-size: 3em;
