@@ -28,7 +28,7 @@ function Nav() {
             {getUser && getPassword ? (
               <>
                 <li><Link to="/produtos" className={headerStyle.menuText}>Produtos</Link></li>
-                <li><Link to="/login" className={headerStyle.menuText}>Pedido</Link></li>
+                <li><Link to="/pedidos" className={headerStyle.menuText}>Pedido</Link></li>
                 <li><Link to="/sobre" className={headerStyle.menuText}>Sobre</Link></li>
                 <li><button onClick={handleLogout} className={headerStyle.logoutBtn}>Logout</button></li>
               </>

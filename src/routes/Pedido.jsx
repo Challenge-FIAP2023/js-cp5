@@ -55,7 +55,7 @@ function Pedido() {
                   <th>Quantidade</th>
                   <th>Nome</th>
                   <th>Descrição</th>
-                  <th>Preço</th>
+                  <th>Preço (R$)</th>
                 </tr>
               </thead>
               <tbody>

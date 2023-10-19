@@ -61,7 +61,7 @@ header {
 
 .logoutBtn:hover {
     background-color: transparent;
-    border: 2px solid var(--cor-primaria);
+    border: 3px solid var(--cor-primaria);
     color: var(--cor-primaria);
     cursor: pointer;
 }

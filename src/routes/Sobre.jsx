@@ -21,7 +21,7 @@ function Sobre() {
             <img src={FotoVictor} alt="Foto do Victor" />
             <div className={sobreStyle.overlay}>
               <a href="https://www.linkedin.com/in/victormnuzzi/" target='_blank' rel="noopener noreferrer" className={sobreStyle.socialMediaIcon} id={sobreStyle.linkedinIcon}><LinkedinIcon size={60}/></a>
-              <a href="https://github.com/victormnuzzi" target='_blank' rel="noopener noreferrer" className={sobreStyle.socialMediaIcon} id={sobreStyle.githubIcon}>><GithubIcon size={60}/></a>
+              <a href="https://github.com/victormnuzzi" target='_blank' rel="noopener noreferrer" className={sobreStyle.socialMediaIcon} id={sobreStyle.githubIcon}><GithubIcon size={60}/></a>
             </div>
           </div>
           <h2>Victor Marcondes Nuzzi</h2>
@@ -32,7 +32,7 @@ function Sobre() {
             <img src={FotoHenri} alt="Foto do Henri" />
             <div className={sobreStyle.overlay}>
               <a href="https://www.linkedin.com/in/henri-lopes-b54b6720a/" target='_blank' rel="noopener noreferrer" className={sobreStyle.socialMediaIcon} id={sobreStyle.linkedinIcon}><LinkedinIcon size={60}/></a>
-              <a href="https://github.com/henrilopes1" target='_blank' rel="noopener noreferrer" className={sobreStyle.socialMediaIcon} id={sobreStyle.githubIcon}>><GithubIcon size={60}/></a>
+              <a href="https://github.com/henrilopes1" target='_blank' rel="noopener noreferrer" className={sobreStyle.socialMediaIcon} id={sobreStyle.githubIcon}><GithubIcon size={60}/></a>
             </div>
           </div>
           <h2>Henri de Oliveira Lopes</h2>
