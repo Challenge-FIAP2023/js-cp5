@@ -3,7 +3,7 @@ import { ListaProdutos } from './Produtos.jsx';
 import { useNavigate } from 'react-router-dom';
 import baseStyle from './base.module.css';
 
-function Inserir() {
+function InserirProduto() {
   
   const navigate = useNavigate();
 
@@ -70,4 +70,4 @@ function Inserir() {
     </>
   );
 }
-export default Inserir;
+export default InserirProduto;

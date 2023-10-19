@@ -22,7 +22,7 @@ function Produtos() {
           <table>
             <thead>
               <tr>
-                <th>ID</th>
+                <th>ID do Produto</th>
                 <th>Quantidade</th>
                 <th>Nome</th>
                 <th>Descrição</th>
@@ -58,7 +58,7 @@ function Produtos() {
         </div>
       </section>
     </>
-  )
+  );
 }
 
 export default Produtos

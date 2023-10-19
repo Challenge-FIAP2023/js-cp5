@@ -4,12 +4,12 @@ import { ListaProdutos } from './Produtos.jsx';
 import baseStyle from './base.module.css';
 
 function ExcluirProduto() {
-  /*Hooks- useParams e Navigate */
+  
   const { id } = useParams();
   const navigate = useNavigate();
 
   const recProdutoListaById = ListaProdutos.filter((item) => item.id == id);
-  /*Hook-useState */
+
   const [produto] = useState({
     id: recProdutoListaById[0].id,
     nome: recProdutoListaById[0].nome,
@@ -17,7 +17,7 @@ function ExcluirProduto() {
     desc: recProdutoListaById[0].desc,
     valor: recProdutoListaById[0].valor,
   });
-  /*funções */
+  
   const handleExclude = (event) => {
     event.preventDefault();
     let indice;
